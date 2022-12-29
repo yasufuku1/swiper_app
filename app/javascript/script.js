@@ -39,4 +39,8 @@ $(function(){
       $('.box1').fadeOut();
     }
   })
-})
+  $('.menu-trigger').on('click',function() {
+      $(this).toggleClass('active');
+      $('#sp-menu').fadeToggle();
+  });
+});
