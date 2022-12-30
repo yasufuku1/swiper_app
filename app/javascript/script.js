@@ -2,7 +2,7 @@
 // 以下の1文を記入
 /* global $*/
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   $('.jquery').on('click',function(){
     $(this).css('color','red');
   });
@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
     let swiper = new Swiper('.swiper',opt);
 });
 
-$(function(){
+$(document).on('turbolinks:load',function(){
   $(window).scroll(function(){
     let scrollTopValue = $(document).scrollTop();
     if ( scrollTopValue > 50 ) {
@@ -39,8 +39,9 @@ $(function(){
       $('.box1').fadeOut();
     }
   })
-  $('.menu-trigger').on('click',function() {
+  $('.menu-trigger').on('click',function(event) {
       $(this).toggleClass('active');
       $('#sp-menu').fadeToggle();
+      event.preventDefault();
   });
 });

@@ -6,7 +6,6 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="stylesheet" href="application.css" />
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -16,7 +15,7 @@
       <h2>MENU</h2>
       <ul>
         <li class="font_link">
-        <%= link_to "MENU1", tests_top_path %>
+          <%= link_to "MENU1", scroll_snap_top_path %>
         </li>
         <li class="font_link"><a href="">MENU1</a></li>
         <li><a href="#">MENU2</a></li>
