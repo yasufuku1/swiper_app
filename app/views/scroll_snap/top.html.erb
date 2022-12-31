@@ -1,4 +1,8 @@
 <h1>ScrollSnap#top</h1>
 <p>Find me in app/views/scroll_snap/top.html.erb</p>
-
-<%= link_to "topリンク", tests_top_path %>
+<div class="container">
+<%= form_with url: search_path,local: true,method: :get, class: "st-NewHeader_search" do |f| %>
+  <%= f.text_field :search, placeholder: 'Search', class: "search_box"  %>
+<% end %>
+</div>
+<%= link_to "topリンク", root_path %>
